@@ -31,6 +31,7 @@ return new class extends Migration
             $table->text('special_instructions')->nullable();
             $table->timestamp('confirmed_at')->nullable();
             $table->timestamp('delivered_at')->nullable();
+            $table->timestamp('closed_at')->nullable();
             $table->timestamps();
         });
 
