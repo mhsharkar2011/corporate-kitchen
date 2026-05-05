@@ -29,10 +29,10 @@ class DatabaseSeeder extends Seeder
 
         // Create Regular User
         User::create([
-            'name' => 'Test User',
+            'name' => 'User One',
             'email' => 'user@corporatekitchen.com',
             'password' => Hash::make('password'),
-            'role' => 'user',
+            'role' => 'client',
             'phone' => '01912345678',
             'address' => 'Gulshan, Dhaka',
         ]);
@@ -42,7 +42,7 @@ class DatabaseSeeder extends Seeder
             'name' => 'John Doe',
             'email' => 'john@example.com',
             'password' => Hash::make('password'),
-            'role' => 'user',
+            'role' => 'supplier',
             'phone' => '01512345678',
             'address' => 'Banani, Dhaka',
         ]);

@@ -17,9 +17,13 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->string('role')->default('user'); // Add role column
             $table->string('phone')->nullable(); // Add phone column
             $table->text('address')->nullable(); // Add address column
+            $table->string('role')->default('client'); // Add role column
+            $table->boolean('is_active')->default(true);
+             $table->timestamp('last_login_at')->nullable();
+             $table->string('avatar')->nullable();
+             $table->json('notification_preferences')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });
